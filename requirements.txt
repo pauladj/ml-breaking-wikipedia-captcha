@@ -1,5 +1,5 @@
 streamlit==0.73.1
-tensorflow==2.2
+tensorflow-cpu==2.2
 Keras==2.4.3
 imutils==0.5.3
 matplotlib==3.3.2
