@@ -7,7 +7,9 @@ from streamlit.script_runner import RerunException
 from test_model import import_model
 from test_model import predict_captcha_image
 
-st.title("Breaking Wikipedia's captcha 🔠")
+title = "Breaking Wikipedia's captcha 🔠"
+st.title(title)
+st.beta_set_page_config(page_title=title)
 
 st.markdown('<style>{}</style>'.format(""".block-container { 
                                             text-align: center;
