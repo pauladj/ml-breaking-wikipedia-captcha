@@ -8,7 +8,6 @@ from test_model import import_model
 from test_model import predict_captcha_image
 
 title = "Breaking Wikipedia's captcha 🔠"
-st.beta_set_page_config(page_title=title)
 st.title(title)
 
 st.markdown('<style>{}</style>'.format(""".block-container { 
