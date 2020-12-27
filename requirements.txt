@@ -1,0 +1,8 @@
+streamlit==0.73.1
+Keras==2.4.3
+imutils==0.5.3
+matplotlib==3.3.2
+requests==2.24.0
+numpy==1.18.5
+opencv_contrib_python==4.4.0.44
+scikit_learn==0.24.0
