@@ -30,7 +30,7 @@ I used the LeNet architecture, first introduced by LeCun et al. in their 1998 pa
 
 
 ## 🔧 Setup 
-```
+```bash
 git clone https://github.com/pauladj/breaking-wikipedia-captcha.git
 cd breaking-wikipedia-captcha
 pip install -r requirements.txt
@@ -38,16 +38,16 @@ pip install -r requirements.txt
 
 
 ## 🎈 Usage 
-You can use the already downloaded captchas in the folder `downloads` or you can download more images using:
+You can use the already downloaded captchas in the `downloads` folder or you can download more images using:
 
-```
-python download_images.py -o captcha_image_folder -n num_images_to_download
+```bash
+python download_images.py --output captcha_image_folder -n num_images_to_download
 ```
 
 To get the text of the captcha images you just have to execute the next command:
 
-```
-python test_model.py -i captcha_image_folder -m output
+```bash
+python test_model.py --input captcha_image_folder --model output
 ```
 
 ## ⛏️ Built Using 

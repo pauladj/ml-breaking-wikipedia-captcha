@@ -24,8 +24,8 @@ def run():
     # Load the model and the label binarizer
     model, lb = import_model(args["model"])
 
-    # loop over some random image paths
-    image_paths = random_images(args["input"])
+    # loop over image paths
+    image_paths = list(paths.list_images(args["input"]))
     for image_path in image_paths:
         image, predictions = predict_captcha_image(image_path, lb)
         # show the output image
@@ -40,14 +40,6 @@ def import_model(model_path):
     model = load_model(model_path)
     lb = load(open(os.path.join(model_path, "label_binarizer.pkl"), 'rb'))
     return model, lb
-
-
-def random_images(images_path):
-    # randomly sample a few of the input images
-    image_paths = list(paths.list_images(images_path))
-    image_paths = np.random.choice(image_paths, size=(10,),
-                                   replace=False)
-    return image_paths
 
 
 def predict_captcha_image(image_path, model, lb):
