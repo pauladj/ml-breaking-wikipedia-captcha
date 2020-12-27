@@ -4,10 +4,8 @@ import streamlit as st
 from imutils import paths
 from streamlit.script_request_queue import RerunData
 from streamlit.script_runner import RerunException
-
-from test_model import predict_captcha_image
-
 from test_model import import_model
+from test_model import predict_captcha_image
 
 st.title("Breaking Wikipedia's captcha 🔠")
 
