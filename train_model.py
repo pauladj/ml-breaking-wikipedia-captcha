@@ -5,7 +5,7 @@ from pickle import dump
 
 import matplotlib.pyplot as plt
 import numpy as np
-from cv2 import cv2
+import cv2
 from imutils import paths
 from keras.optimizers import SGD
 from keras.preprocessing.image import img_to_array

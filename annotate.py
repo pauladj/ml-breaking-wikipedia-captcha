@@ -1,7 +1,7 @@
 import argparse
 import os
 
-from cv2 import cv2
+import cv2
 from imutils import paths
 
 from utils.captcha_helper import extract_the_characters
