@@ -25,7 +25,7 @@
 
 I used the LeNet architecture, first introduced by LeCun et al. in their 1998 paper, *Gradient-Based Learning Applied to Document Recognition*. The authors' motivation for the implementation of LeNet was primarily for Optical Character Recognition (OCR). It's a simple model with only two convolutional layers. I achieved 96% accuracy and 0.15 loss both on the train and the test set.
 
-<img width="500" src="output/results.png" />
+<div style="text-align:center;"><img width="500" src="output/results.png" /></div>
 
 
 
