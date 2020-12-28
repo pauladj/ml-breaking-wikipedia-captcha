@@ -11,19 +11,19 @@
 
 ---
 
-<p align="center"> Breaking 2020 Wikipedia's captcha using image processing and deep learning techniques. I am <b>not responsible</b> for how this code is used.
+<p align="center"> Breaking 2020 Wikipedia's captcha using image processing and deep learning techniques. Before publishing the project, I sent an email to Wikipedia to make them aware of the vulnerability. I'm <b>not responsible</b> for how this code is used.
     <br> 
 </p>
 
 ## 👓 Demo
 
-<a href="https://breaking-wikipedia-captcha.herokuapp.com/"><img src="https://img.shields.io/badge/heroku-Open Web App-blue" /></a>
+<a href="https://breaking-wikipedia-captcha.herokuapp.com/"><img src="https://img.shields.io/badge/Heroku-Open Web App-red?logo=heroku" /></a>
 
 <img src="img/breaking-wikipedia-captcha.gif" />
 
 ## 📄 Results
 
-I used the LeNet architecture, first introduced by LeCun et al. in their 1998 paper, *Gradient-Based Learning Applied to Document Recognition*. The authors' motivation behind implementing LeNet was primarly for Optical Character Recognition (OCR). It's a simple model with only two convolutional layers. I got 96% accuracy and 0.15 loss on both train and test set.
+I used the LeNet architecture, first introduced by LeCun et al. in their 1998 paper, *Gradient-Based Learning Applied to Document Recognition*. The authors' motivation for the implementation of LeNet was primarily for Optical Character Recognition (OCR). It's a simple model with only two convolutional layers. I achieved 96% accuracy and 0.15 loss both on the train and the test set.
 
 <img width="500" src="output/results.png" />
 
@@ -56,4 +56,4 @@ python test_model.py --input captcha_image_folder --model output
 - [Streamlit](https://www.streamlit.io/) - Deploy data apps
 
 ## 🎉 Acknowledgements 
-- Inspired by the book *Deep Learning for Computer Vision with Python (Starter Bundle)* by Adrian Rosebrock.
+- Inspired by Adrian Rosebrock's book *Deep Learning for Computer Vision with Python (Starter Bundle)*
