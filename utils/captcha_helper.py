@@ -17,6 +17,8 @@ def preprocess(image, width, height):
     # otherwise, the height is greater than the width so resize
     # along the height
     else:
+    #     if height==0:
+    #         height=1
         image = imutils.resize(image, height=height)
 
     # determine the padding values for the width and height to

@@ -22,25 +22,31 @@ def run():
     args = vars(ap.parse_args())
 
     # Load the model and the label binarizer
-    model, lb = import_model(args["model"])
+    model = import_model(args["model"])
+    lb = import_model_lb(args["model"])
 
     # loop over image paths
     image_paths = list(paths.list_images(args["input"]))
     for image_path in image_paths:
-        image, predictions = predict_captcha_image(image_path, lb)
+        image, predictions = predict_captcha_image(image_path, model,lb)
         # show the output image
         print("[INFO] captcha: {}".format("".join(predictions)))
-        cv2.imshow("Output", image)
-        cv2.waitKey()
+        # cv2.imshow("Output", image)
+        # cv2.imwrite("./Output/", image)
+        # cv2.waitKey()
 
 
 def import_model(model_path):
     # load the pre-trained network and label binarizer
     print("[INFO] loading pre-trained network...")
     model = load_model(model_path)
+    return model
+def import_model_lb(model_path):
+    # load the pre-trained network and label binarizer
+    print("[INFO] loading pre-trained network...")
+    print(os.path.join(model_path, "label_binarizer.pkl"))
     lb = load(open(os.path.join(model_path, "label_binarizer.pkl"), 'rb'))
-    return model, lb
-
+    return lb
 
 def predict_captcha_image(image_path, model, lb):
     # load the image, extract the characters, preprocess them and predict
